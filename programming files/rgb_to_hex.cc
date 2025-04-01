@@ -9,9 +9,12 @@ std::string rgb_to_hex(int r, int g, int b)
     b = std::max(0, std::min(255, b));
 
     std::stringstream ss;
+    // set the hex code, blanks 0
     ss << std::uppercase << std::hex << std::setfill('0')
+        // set widths of field all to 2
        << std::setw(2) << r << std::setw(2) << g << std::setw(2) << b;
 
+    // return the hex code
     return ss.str();
 }
 
